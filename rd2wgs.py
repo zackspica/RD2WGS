@@ -97,8 +97,8 @@ def rd2wgs(x, y, print=True):
     return phiwgs, lamwgs 
 
 if __name__=='__main__':
-    x = 24220824
-    y = 59273422
+    x = 242208.24
+    y = 592734.22
     rd2wgs(x,y)
     
 #EOF
