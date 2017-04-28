@@ -81,7 +81,7 @@ def bessel2wgs84(phibes, lambes):
     return np.round(phiwgs,5), np.round(lamwgs,5)
 
 
-def rd2wgs(x, y): 
+def rd2wgs(x, y, print=True): 
     """
     main fct
     """
@@ -90,8 +90,9 @@ def rd2wgs(x, y):
     phibes, lambes = rd2bessel(x, y)
     phiwgs, lamwgs = bessel2wgs84(phibes,lambes)
     
-    for idx in xrange(0,len(phiwgs),1):
-        print 'N %s, E %s'%(phiwgs[idx], lamwgs[idx]) 
+    if print:
+        for idx in xrange(0,len(phiwgs),1):
+            print 'N %s, E %s'%(phiwgs[idx], lamwgs[idx]) 
 
     return phiwgs, lamwgs 
 
