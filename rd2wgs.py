@@ -4,7 +4,8 @@ import numpy as np
 
 def rd2bessel(x, y): 
     """ Convert xy to Bessel """
-
+    x       = np.array(x)
+    y       = np.array(y)
     x0      = 1.55e5 
     y0      = 4.63e5 
     k       = 0.9999079 
